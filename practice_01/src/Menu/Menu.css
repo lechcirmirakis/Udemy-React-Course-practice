@@ -1,0 +1,14 @@
+.Menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+.Menu li {
+    cursor: pointer;
+}
+
+.Menu li:hover {
+    text-decoration: underline;
+}

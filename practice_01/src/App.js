@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
+
 import Userinput from './userInput/Userinput.js';
 import Useroutput from './userOutput/Useroutput.js';
+
+import Menu from './Menu/Menu.js';
 
 class App extends Component {
   state = {
@@ -27,6 +30,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Menu/>
         <Userinput name={this.state.users[2].name } changed={this.nameChangeHandler}/>
         <Useroutput name={this.state.users[0].name} surname={this.state.users[0].surname}/>
         <Useroutput name={this.state.users[1].name} surname={this.state.users[1].surname}/>
