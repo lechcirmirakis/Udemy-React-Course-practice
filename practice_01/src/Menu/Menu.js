@@ -2,12 +2,15 @@ import React from 'react';
 import './Menu.css';
 
 const menu = (props) => {
+
+    let menuLinks = props.links.map((element) => {
+        return <li><a href={element.urL}></a>{element.text}</li>
+        
+    });
+
     return (
         <ul className="Menu">
-            <li>Strona Główna</li>
-            <li>Blog</li>
-            <li>Galeria</li>
-            <li>Kontakt</li>
+            {menuLinks}
         </ul>
     )
 }
