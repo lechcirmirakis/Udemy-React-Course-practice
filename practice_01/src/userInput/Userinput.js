@@ -7,11 +7,10 @@ const userinput = (props) => {
         border: '1px solid blue',
         padding: '8px'
     }
-    return (
-        <div>
-            <input style={style} onChange={props.changed} value={props.name} type="text"/>
-        </div>
-    )
+    return <input 
+        style={style} 
+        onChange={props.changed} 
+        value={props.name} type="text"/>
 }
 
 export default userinput;

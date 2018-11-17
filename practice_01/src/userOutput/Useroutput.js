@@ -7,7 +7,7 @@ const useroutput = (props) => {
             <p>{props.name}</p>
             <p>{props.surname}</p>
         </div>
-    )
-}
+    );
+};
 
 export default useroutput;
