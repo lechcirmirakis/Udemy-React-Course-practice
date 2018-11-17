@@ -1,0 +1,8 @@
+.User {
+    display: flex;
+    width: 300px;
+    margin: 15px auto;
+    justify-content: space-around;
+    border: 1px solid grey;
+    box-shadow: 1px 2px 3px #ccc;
+}

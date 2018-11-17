@@ -1,25 +1,37 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Userinput from './userInput/Userinput.js';
+import Useroutput from './userOutput/Useroutput.js';
 
 class App extends Component {
+  state = {
+    users: [
+      {name: 'Wiktor', surname: 'Nowak'},
+      {name: 'Bartosz', surname: 'Kowalski'},
+      {name: 'Kamila', surname: 'Borowska'},
+      {name: 'Karolina', surname: 'Zachęta'}
+    ]
+  }
+
+  nameChangeHandler = (event) => {
+    this.setState({
+      users: [
+        {name: 'Wiktor', surname: 'Nowak'},
+        {name: 'Bartosz', surname: 'Kowalski'},
+        {name: event.target.value, surname: 'Borowska'},
+        {name: 'Karolina', surname: 'Zachęta'}
+      ]
+    })
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Userinput name={this.state.users[2].name } changed={this.nameChangeHandler}/>
+        <Useroutput name={this.state.users[0].name} surname={this.state.users[0].surname}/>
+        <Useroutput name={this.state.users[1].name} surname={this.state.users[1].surname}/>
+        <Useroutput name={this.state.users[2].name} surname={this.state.users[2].surname}/>
+        <Useroutput name={this.state.users[3].name} surname={this.state.users[3].surname}/>
       </div>
     );
   }
