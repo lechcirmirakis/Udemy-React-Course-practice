@@ -1,0 +1,14 @@
+.Likebox {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    margin: auto;
+    padding: 0 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    justify-content: space-around;
+}
+
+.Likebox h2 {
+    margin: 0;
+}

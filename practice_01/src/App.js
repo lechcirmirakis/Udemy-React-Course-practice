@@ -5,6 +5,7 @@ import Userinput from './userInput/Userinput.js';
 import Useroutput from './userOutput/Useroutput.js';
 import Addnumber from './Numbers/Numbers.js';
 import Sum from './Sum/Sum.js';
+import LikesBox from './Likes/Likes.js';
 
 import Menu from './Menu/Menu.js';
 
@@ -18,7 +19,7 @@ class App extends Component {
     ],
     numbers: [
       1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-    ]
+    ],
   }
 
   nameChangeHandler = (event) => {
@@ -43,6 +44,7 @@ class App extends Component {
         <Useroutput name={this.state.users[3].name} surname={this.state.users[3].surname}/>
         <Addnumber number1={12} number2 ={14}/>
         <Sum numbers={this.state.numbers}/>
+        <LikesBox likes={87}/>
       </div>
     );
   }
