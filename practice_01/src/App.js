@@ -4,6 +4,7 @@ import './App.css';
 import Userinput from './userInput/Userinput.js';
 import Useroutput from './userOutput/Useroutput.js';
 import Addnumber from './Numbers/Numbers.js';
+import Sum from './Sum/Sum.js';
 
 import Menu from './Menu/Menu.js';
 
@@ -14,6 +15,9 @@ class App extends Component {
       {name: 'Bartosz', surname: 'Kowalski'},
       {name: 'Kamila', surname: 'Borowska'},
       {name: 'Karolina', surname: 'Zachęta'}
+    ],
+    numbers: [
+      1, 2, 3, 4, 5, 6, 7, 8, 9, 10
     ]
   }
 
@@ -38,6 +42,7 @@ class App extends Component {
         <Useroutput name={this.state.users[2].name} surname={this.state.users[2].surname}/>
         <Useroutput name={this.state.users[3].name} surname={this.state.users[3].surname}/>
         <Addnumber number1={12} number2 ={14}/>
+        <Sum numbers={this.state.numbers}/>
       </div>
     );
   }
